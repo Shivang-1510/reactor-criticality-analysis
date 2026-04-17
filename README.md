@@ -2,7 +2,8 @@
 
 ## Overview
 
-Criticality in a nuclear reactor is the stable state where a sustained, controlled fission chain reaction occurs, producing a constant power output. It signifies a perfect balance between neutron production and neutron loss within the reactor core. This project models neutron behavior in a nuclear reactor using the neutron diffusion equation and computes the effective multiplication factor (k-effective). It determines whether the reactor is subcritical, critical, or supercritical. Subcritical: Chain reaction dies out (neutron loss > production).
+Criticality in a nuclear reactor is the stable state where a sustained, controlled fission chain reaction occurs, producing a constant power output. It signifies a perfect balance between neutron production and neutron loss within the reactor core. This project models neutron behavior in a nuclear reactor using the neutron diffusion equation and computes the effective multiplication factor (k-effective). It determines whether the reactor is subcritical, critical, or supercritical. 
+Subcritical: Chain reaction dies out (neutron loss > production).
 Critical: Chain reaction is stable (production = loss).
 Supercritical: Chain reaction increases (production > loss), used to raise power levels.
 
@@ -43,7 +44,7 @@ The simulation outputs:
 
 ## Visualization
 
-Graph(resultsflux.png)
+![Plot](esultsflux.png)
 
 ## Key Insights
 
