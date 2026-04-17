@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 from typing import Tuple, List
 import os
 
-# ==============================
+
 # PARAMETERS
-# ==============================
+
 LENGTH = 100       # Reactor length (cm)
 N = 100            # Grid points
 DX = LENGTH / N
@@ -18,9 +18,9 @@ MAX_ITER = 300
 TOL = 1e-5
 
 
-# ==============================
+
 # INITIALIZATION
-# ==============================
+
 def initialize_flux(n: int) -> np.ndarray:
     """Initialize neutron flux with boundary conditions.
     
@@ -42,9 +42,9 @@ def initialize_flux(n: int) -> np.ndarray:
     return phi
 
 
-# ==============================
+
 # DIFFUSION STEP
-# ==============================
+
 def diffusion_step(phi: np.ndarray, k: float) -> np.ndarray:
     """Perform one diffusion step using finite difference method.
     
@@ -67,9 +67,9 @@ def diffusion_step(phi: np.ndarray, k: float) -> np.ndarray:
     return phi_new
 
 
-# ==============================
+
 # NORMALIZATION
-# ==============================
+
 def normalize(phi: np.ndarray) -> np.ndarray:
     """Normalize flux to maximum value.
     
@@ -88,9 +88,9 @@ def normalize(phi: np.ndarray) -> np.ndarray:
     return phi / max_val
 
 
-# ==============================
+
 # K-EFFECTIVE UPDATE
-# ==============================
+
 def update_k(phi_old: np.ndarray, phi_new: np.ndarray, k_old: float) -> float:
     """Update k-effective using power iteration method.
     
@@ -111,9 +111,9 @@ def update_k(phi_old: np.ndarray, phi_new: np.ndarray, k_old: float) -> float:
     return k_old * (num / den)
 
 
-# ==============================
+
 # MAIN SOLVER
-# ==============================
+
 def solve() -> Tuple[np.ndarray, float, List[float]]:
     """Solve reactor criticality problem using power iteration.
     
@@ -150,9 +150,9 @@ def solve() -> Tuple[np.ndarray, float, List[float]]:
     return phi, k, k_history
 
 
-# ==============================
+
 # RESULTS
-# ==============================
+
 def plot_results(phi: np.ndarray, k: float) -> None:
     """Plot neutron flux distribution.
     
@@ -210,9 +210,9 @@ def print_reactor_state(k: float) -> None:
         print("Reactor State: SUPERCRITICAL")
 
 
-# ==============================
+
 # RUN
-# ==============================
+
 if __name__ == "__main__":
     try:
         phi, k, k_history = solve()
