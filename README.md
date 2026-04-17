@@ -44,7 +44,7 @@ The simulation outputs:
 
 ## Visualization
 
-![Plot](esultsflux.png)
+![Plot](resultsflux.png)
 
 ## Key Insights
 
