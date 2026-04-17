@@ -43,7 +43,7 @@ The simulation outputs:
 
 ## Visualization
 
-
+Graph(resultsflux.png)
 
 ## Key Insights
 
